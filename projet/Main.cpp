@@ -13,9 +13,9 @@ int main() {
     std::cout << "Nom du boxeur rouge : " << boxeur_2->getNom() << std::endl;
     std::cout << "Poids du boxeur rouge : " << boxeur_2->getPoids() << " kg\n" << std::endl;
 
-    Combat::Combat Combat_1("Combat 1/8e");
-    std::cout << "Adresse du combat des 1/8e : " << &Combat_1 << std::endl;
-    std::cout << "Niveau de combat des 1/8e : " << Combat_1.getNiveau() << std::endl;
+    Combat::Combat Combat_1("1/8e");
+    std::cout << "Adresse du combat : " << &Combat_1 << std::endl;
+    std::cout << "Niveau du combat : " << Combat_1.getNiveau() << std::endl;
 
     delete boxeur_2;  
 

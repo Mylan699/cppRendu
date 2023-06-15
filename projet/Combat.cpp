@@ -4,11 +4,11 @@
 namespace Combat {
 
     Combat::Combat(const std::string& _niveau) : niveau(_niveau) {
-        std::cout << "Niveau du combat : " << niveau << std::endl;
+        std::cout << "Liste des combat: " <<  std::endl;
     }
 
     Combat::~Combat() {
-        std::cout << "Fin du combat de niveau : " << niveau << std::endl;
+        std::cout << "Fin du combat des " << niveau << "\n" << std::endl;
     }
 
     std::string Combat::getNiveau() const {
