@@ -16,6 +16,6 @@ namespace Combat {
         std::string getNiveau() const;
     };
 
-} // namespace CombatNamespace
+} 
 
-#endif // COMBAT_H
+#endif 
