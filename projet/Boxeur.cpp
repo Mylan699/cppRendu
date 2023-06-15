@@ -8,7 +8,7 @@ namespace Boxeur {
     }
 
     Boxeur::~Boxeur() {
-        std::cout << "Le prochain boxeur a faire son entree sur le ring, un maximum de bruit pour " << nom << std::endl;
+        std::cout << "Le boxeur détruit est  " << nom << std::endl;
     }
 
     std::string Boxeur::getNom() const {
