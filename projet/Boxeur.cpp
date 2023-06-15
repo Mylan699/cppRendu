@@ -3,17 +3,16 @@
 
 class Boxeur {
 private:
-    std::string nom;
+    const std::string nom;
     double poids;
 
 public:
-
     Boxeur(const std::string& _nom, double _poids) : nom(_nom), poids(_poids) {
         std::cout << "Info sur le boxeur : " << nom << std::endl;
     }
 
     ~Boxeur() {
-        std::cout << "Le prochain boxeur ... " << nom << std::endl;
+        std::cout << "Le prochain boxeur a faire son entree sur le ring, un maximum de bruit pour " << nom << std::endl;
     }
 
     std::string getNom() const {
