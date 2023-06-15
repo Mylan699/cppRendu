@@ -29,19 +29,17 @@ public:
 };
 
 int main() {
-    std::string nom;
-    double poids;
+    Boxeur boxeur_1("Rolando Romero", 75);
+    std::cout << "Adresse du  boxeur bleu : " << &boxeur_1 << std::endl;
+    std::cout << "Nom du boxeur bleu : " << boxeur_1.getNom() << std::endl;
+    std::cout << "Poids de boxeur blru : " << boxeur_1.getPoids() << " kg\n" << std::endl;
 
-    std::cout << "Entrez le nom du boxeur : ";
-    std::cin >> nom;
+    Boxeur* boxeur_2 = new Boxeur("Alberto Puello", 78);
+    std::cout << "Adresse du boxeur rouge : " << boxeur_2 << std::endl;
+    std::cout << "Nom du boxeur rouge : " << boxeur_2->getNom() << std::endl;
+    std::cout << "Poids du boxeur rouge: " << boxeur_2->getPoids() << " kg\n" << std::endl;
 
-    std::cout << "Entrez le poids du boxeur : ";
-    std::cin >> poids;
-
-    Boxeur boxeur(nom, poids);
-
-    std::cout << "Nom du boxeur : " << boxeur.getNom() << std::endl;
-    std::cout << "Poids du boxeur : " << boxeur.getPoids() << std::endl;
+    delete boxeur_2;  
 
     return 0;
 }
