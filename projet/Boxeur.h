@@ -19,6 +19,6 @@ namespace Boxeur {
         void setPoids(double _poids);
     };
 
-} 
+}
 
-#endif 
+#endif

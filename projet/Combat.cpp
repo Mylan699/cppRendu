@@ -15,24 +15,6 @@ namespace Combat {
         return niveau;
     }
 
-    void Combat::setCoinBleu(Boxeur::Boxeur* boxeur) {
-        if (boxeur != coinRouge) {
-            coinBleu = boxeur;
-        }
-        else {
-            std::cout << "Erreur : Le même boxeur est déjà dans le coin rouge." << std::endl;
-        }
-    }
-
-    void Combat::setCoinRouge(Boxeur::Boxeur* boxeur) {
-        if (boxeur != coinBleu) {
-            coinRouge = boxeur;
-        }
-        else {
-            std::cout << "Erreur : Le même boxeur est déjà dans le coin bleu." << std::endl;
-        }
-    }
-
     Boxeur::Boxeur* Combat::getCoinBleu() const {
         return coinBleu;
     }
@@ -45,16 +27,23 @@ namespace Combat {
         return vainqueur;
     }
 
+    void Combat::setCoinBleu(Boxeur::Boxeur* boxeur) {
+        coinBleu = boxeur;
+    }
+
+    void Combat::setCoinRouge(Boxeur::Boxeur* boxeur) {
+        coinRouge = boxeur;
+    }
+
     Boxeur::Boxeur* Combat::DesignerVainqueur(const std::string& couleurCoin) {
         if (couleurCoin == "bleu") {
             vainqueur = coinBleu;
-        }
-        else if (couleurCoin == "rouge") {
+        } else if (couleurCoin == "rouge") {
             vainqueur = coinRouge;
-        }
-        else {
+        } else {
             vainqueur = nullptr;
         }
+
         return vainqueur;
     }
 
